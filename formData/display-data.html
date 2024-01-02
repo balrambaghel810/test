@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="userDataDisplay">
+        <h2>Submitted Form Data:</h2>
+        <p>Name: <span id="nameDisplay"></span></p>
+        <p>Age: <span id="ageDisplay"></span></p>
+        <p>Gender: <span id="genderDisplay"></span></p>
+    </div>
+    
+    <script>
+        const userData = JSON.parse(localStorage.getItem('userData'));
+    
+        if (userData) {
+            document.getElementById('nameDisplay').innerText = userData.name;
+            document.getElementById('ageDisplay').innerText = userData.age;
+            document.getElementById('genderDisplay').innerText = userData.gender;
+        }
+    </script>
+    
+</body>
+</html>
